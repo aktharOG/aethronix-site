@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+:root { --bg:#071014; --panel:#0b171c; --line:#183139; --text:#eaf4f5; --muted:#91a8ad; --accent:#44e6b2; --accent2:#64a8ff; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--bg); color:var(--text); font-family:Arial, Helvetica, sans-serif; }
+::selection { background:rgba(68,230,178,.25); }
+.grid-bg { background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px); background-size:48px 48px; }
+.glow { box-shadow:0 0 80px rgba(68,230,178,.12); }
+.text-gradient { background:linear-gradient(100deg,#fff 20%,#8df5d1 65%,#64a8ff); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.reveal { animation:rise .7s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes rise { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:none} }
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{animation:none}}
